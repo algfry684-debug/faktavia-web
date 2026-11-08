@@ -1,0 +1,11 @@
+---
+interface Props { prev?: string; next?: string; current: number; last: number; }
+const { prev, next, current, last } = Astro.props;
+---
+{last > 1 && (
+  <nav class="pager" aria-label="Halaman">
+    <a class="btn btn-ghost" href={prev ?? '#'} aria-disabled={!prev}>&larr; Sebelumnya</a>
+    <span>Halaman {current} dari {last}</span>
+    <a class="btn btn-ghost" href={next ?? '#'} aria-disabled={!next}>Berikutnya &rarr;</a>
+  </nav>
+)}

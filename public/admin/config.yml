@@ -1,0 +1,80 @@
+# Konfigurasi admin panel Faktavia.id (Sveltia CMS)
+backend:
+  name: github
+  repo: algfry684-debug/faktavia-web
+  branch: main
+
+site_url: https://faktavia.web.id
+display_url: https://faktavia.web.id
+logo_url: /assets/favicon-512.png
+
+media_folder: public/uploads
+public_folder: /uploads
+
+output:
+  omit_empty_optional_fields: true
+
+collections:
+  # ================= BERITA =================
+  - name: berita
+    label: Berita
+    label_singular: Berita
+    folder: src/content/berita
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{category}})"
+    sortable_fields: [date, title, category]
+    view_filters:
+      - { label: Draft, field: draft, pattern: true }
+      - { label: Berita Utama, field: featured, pattern: true }
+    fields:
+      - { label: Judul, name: title, widget: string, hint: "Tulis fakta terpenting. Singkat dan jelas." }
+      - { label: Ringkasan, name: description, widget: text, hint: "1-2 kalimat. Tampil di kartu berita dan hasil pencarian Google." }
+      - label: Kategori
+        name: category
+        widget: select
+        options: [Nasional, Ekonomi, Teknologi, Gaya Hidup, Olahraga, Cek Fakta]
+      - { label: Tanggal Terbit, name: date, widget: datetime }
+      - { label: Penulis, name: author, widget: string, default: Redaksi Faktavia }
+      - { label: Foto Utama, name: image, widget: image, required: false, hint: "Disarankan rasio 16:10, misalnya 1600x1000 piksel." }
+      - { label: Keterangan Foto, name: imageCaption, widget: string, required: false, hint: "Sertakan nama fotografer atau sumber foto." }
+      - { label: Tampilkan sebagai Berita Utama, name: featured, widget: boolean, default: false, hint: "Hanya satu yang tampil di beranda. Kalau lebih dari satu dicentang, yang terbaru dipakai." }
+      - { label: Masuk daftar Lagi Rame, name: popular, widget: boolean, default: false }
+      - label: Vonis Cek Fakta
+        name: verdict
+        widget: select
+        options: [HOAKS, FAKTA, MENYESATKAN]
+        required: false
+        hint: "Isi hanya kalau kategorinya Cek Fakta."
+      - { label: Draft (belum tayang), name: draft, widget: boolean, default: false, hint: "Centang kalau belum mau ditampilkan di website." }
+      - { label: Isi Berita, name: body, widget: markdown }
+
+  # ================= HALAMAN =================
+  - name: halaman
+    label: Halaman (Tentang Kami, dll)
+    label_singular: Halaman
+    folder: src/content/halaman
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Judul, name: title, widget: string }
+      - { label: Deskripsi Singkat, name: description, widget: string, required: false }
+      - { label: Isi, name: body, widget: markdown }
+
+  # ================= PENGATURAN =================
+  - name: pengaturan
+    label: Pengaturan Situs
+    files:
+      - name: situs
+        label: Kontak dan Sosial Media
+        file: src/data/situs.json
+        fields:
+          - { label: Email Redaksi, name: email, widget: string, required: false }
+          - { label: Link WhatsApp Channel, name: whatsapp, widget: string, required: false, hint: "Isi alamat lengkap, misalnya https://whatsapp.com/channel/..." }
+          - { label: Link Instagram, name: instagram, widget: string, required: false, hint: "Misalnya https://instagram.com/namaakun" }
+          - { label: Link TikTok, name: tiktok, widget: string, required: false }
+          - { label: Link X (Twitter), name: x, widget: string, required: false }

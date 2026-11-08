@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import Pager from '../../components/Pager.astro';
+import { getPosts } from '../../lib/site';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getPosts();
+  return paginate(posts, { pageSize: 12 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+<BaseLayout title="Berita Terkini" description="Semua berita terbaru dari Faktavia.id.">
+  <section>
+    <div class="wrap">
+      <div class="page-head">
+        <h1 class="sec" style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -.03em;">Berita Terkini</h1>
+        <p>Semua berita Faktavia, dari yang paling baru.</p>
+      </div>
+      {page.data.length > 0 ? (
+        <div class="grid" style="margin-top: 22px;">{page.data.map((p) => <PostCard post={p} />)}</div>
+      ) : (
+        <p class="empty">Belum ada berita.</p>
+      )}
+      <Pager prev={page.url.prev} next={page.url.next} current={page.currentPage} last={page.lastPage} />
+    </div>
+  </section>
+</BaseLayout>

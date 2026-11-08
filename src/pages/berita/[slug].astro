@@ -1,0 +1,92 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPosts, catUrl, postUrl, fmtDateTime, readMinutes } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const d = post.data;
+const { Content } = await render(post);
+
+const url = new URL(postUrl(post.id), Astro.site).href;
+const all = await getPosts();
+const related = all.filter((p) => p.id !== post.id && p.data.category === d.category).slice(0, 3);
+
+const verdictClass = { HOAKS: 'v-hoaks', FAKTA: 'v-fakta', MENYESATKAN: 'v-sesat' } as const;
+const imgAbs = d.image ? new URL(d.image, Astro.site).href : new URL('/assets/og-image.jpg', Astro.site).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsArticle',
+  headline: d.title,
+  description: d.description,
+  datePublished: d.date.toISOString(),
+  author: { '@type': 'Person', name: d.author },
+  image: [imgAbs],
+  mainEntityOfPage: url,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Faktavia.id',
+    logo: { '@type': 'ImageObject', url: 'https://faktavia.web.id/assets/favicon-512.png' },
+  },
+};
+const shareText = encodeURIComponent(`${d.title} ${url}`);
+---
+<BaseLayout title={d.title} description={d.description} image={d.image ?? '/assets/og-image.jpg'} type="article" jsonLd={jsonLd}>
+  <article class="article">
+    <p class="crumbs"><a href="/">Beranda</a> / <a href={catUrl(d.category)}>{d.category}</a></p>
+    <span class="tag">{d.category}</span>
+    <h1>{d.title}</h1>
+    <p class="dek">{d.description}</p>
+
+    <div class="byline">
+      <span>Oleh <strong>{d.author}</strong></span>
+      <span>{fmtDateTime(d.date)}</span>
+      <span>{readMinutes(post.body)} menit baca</span>
+    </div>
+
+    {d.verdict && (
+      <p><span class={`verdict verdict-big ${verdictClass[d.verdict]}`}>{d.verdict}</span></p>
+    )}
+
+    {d.image && (
+      <figure>
+        <img src={d.image} alt={d.imageCaption ?? d.title} />
+        {d.imageCaption && <figcaption>{d.imageCaption}</figcaption>}
+      </figure>
+    )}
+
+    <div class="prose"><Content /></div>
+
+    <div class="share">
+      <span>Bagikan:</span>
+      <a class="btn btn-navy" href={`https://wa.me/?text=${shareText}`} target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-ghost" href={`https://twitter.com/intent/tweet?text=${shareText}`} target="_blank" rel="noopener">X</a>
+      <button class="btn btn-ghost" type="button" id="copyLink" data-url={url}>Salin tautan</button>
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="related">
+      <div class="wrap">
+        <div class="sec-head"><h2 class="sec"><small>Baca juga</small>Berita {d.category} lainnya</h2></div>
+        <div class="grid">{related.map((p) => <PostCard post={p} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <script is:inline>
+    var b = document.getElementById('copyLink');
+    if (b) b.addEventListener('click', function () {
+      var u = b.getAttribute('data-url');
+      (navigator.clipboard ? navigator.clipboard.writeText(u) : Promise.reject()).then(function () {
+        b.textContent = 'Tautan tersalin';
+      }).catch(function () { window.prompt('Salin tautan ini:', u); });
+    });
+  </script>
+</BaseLayout>

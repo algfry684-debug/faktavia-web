@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { CAT_CLASS, postUrl, fmtDate, readMinutes } from '../lib/site';
+interface Props { post: CollectionEntry<'berita'>; }
+const { post } = Astro.props;
+const d = post.data;
+---
+<a class="card" href={postUrl(post.id)}>
+  <div class={`thumb ${CAT_CLASS[d.category]}`}>
+    {d.image ? <img src={d.image} alt="" loading="lazy" /> : <div class="ph"></div>}
+    <span class="tag">{d.category}</span>
+  </div>
+  <div class="card-body">
+    <h3>{d.title}</h3>
+    <p>{d.description}</p>
+    <div class="meta"><span>{fmtDate(d.date)}</span><span>{readMinutes(post.body)} menit baca</span></div>
+  </div>
+</a>
