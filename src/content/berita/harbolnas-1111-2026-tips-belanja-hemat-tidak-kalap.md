@@ -1,10 +1,13 @@
 ---
-title: "11.11 Datang: 5 Cara Belanja Online Tetap Hemat dan Nggak Kalap"
-description: "Diskon, voucher, dan cashback bakal bertebaran pekan ini. Catat dulu strategi sederhana supaya dompet aman dan nggak tergiur promo palsu."
+title: '11.11 Datang: 5 Cara Belanja Online Tetap Hemat dan Nggak Kalap'
+description: Diskon, voucher, dan cashback bakal bertebaran pekan ini. Catat dulu strategi sederhana supaya dompet aman dan nggak tergiur promo palsu.
 category: Gaya Hidup
 date: 2026-11-09T02:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/CNV-SEO-29_Tips-Belanja-Online-yang-Aman-dan-Nyaman_Thumbnail-Artikel.webp
+featured: false
 popular: true
+draft: false
 ---
 
 Tanggal kembar 11.11 tinggal dua hari lagi, dan promo belanja online mulai ramai: potongan harga, voucher, gratis ongkir, sampai cashback. Secara resmi, Hari Belanja Online Nasional (Harbolnas) berpusat pada 12 Desember, tetapi banyak platform sudah menggelar kampanye besar setiap 11 November.
