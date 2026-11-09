@@ -1,9 +1,13 @@
 ---
-title: "IHSG Berbalik Hijau di Akhir Pekan, Ditutup 5.050 Meski Sempat Anjlok Hampir 2 Persen"
-description: "Setelah tertekan sepanjang sesi pertama, IHSG ditutup naik 0,40 persen. Saham big cap dan kabar cadangan devisa jadi penopang."
+title: IHSG Berbalik Hijau di Akhir Pekan, Ditutup 5.050 Meski Sempat Anjlok Hampir 2 Persen
+description: Setelah tertekan sepanjang sesi pertama, IHSG ditutup naik 0,40 persen. Saham big cap dan kabar cadangan devisa jadi penopang.
 category: Ekonomi
 date: 2026-11-06T11:30:00.000Z
 author: Redaksi Faktavia
+image: /uploads/l1xcecmflzfvwv7c53g_Untitled design - 2022-04-13T160032.739.webp
+featured: false
+popular: false
+draft: false
 ---
 
 Indeks Harga Saham Gabungan (IHSG) mengakhiri perdagangan Jumat (6/11/2026) di zona hijau. Indeks ditutup naik 0,40 persen, sekitar 20 poin, ke level **5.050,42**, padahal hampir sepanjang hari bergerak di zona merah.
