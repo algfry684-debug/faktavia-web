@@ -1,9 +1,13 @@
 ---
-title: "Marquez Gagal Kunci Gelar di Qatar, Peluang Juara Dunia MotoGP Pindah ke Portugal"
-description: "Bezzecchi menang di Lusail, Marc Marquez finis kedua dan masih unggul di klasemen. Gelar dunia berpeluang dipastikan di seri Portugal akhir November."
+title: Marquez Gagal Kunci Gelar di Qatar, Peluang Juara Dunia MotoGP Pindah ke Portugal
+description: Bezzecchi menang di Lusail, Marc Marquez finis kedua dan masih unggul di klasemen. Gelar dunia berpeluang dipastikan di seri Portugal akhir November.
 category: Olahraga
 date: 2026-11-09T01:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/images (6).jpeg
+featured: false
+popular: false
+draft: false
 ---
 
 Marc Marquez belum bisa merayakan gelar juara dunia MotoGP 2026 di Qatar. Pembalap yang finis kedua itu masih memimpin klasemen, tetapi kepastian gelar harus menunggu seri berikutnya.
