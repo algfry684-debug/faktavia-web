@@ -1,9 +1,13 @@
 ---
-title: "Aksi 10 November 2026: Peta Lokasi dan Isu yang Dibawa di Jakarta, Surabaya, hingga Riau"
-description: "Besok, Selasa 10 November, sejumlah kelompok menggelar aksi di beberapa kota. Ini rangkuman lokasi, jam, dan tuntutan yang sudah diumumkan, plus imbauan buat pengguna jalan."
+title: 'Aksi 10 November 2026: Peta Lokasi dan Isu yang Dibawa di Jakarta, Surabaya, hingga Riau'
+description: Besok, Selasa 10 November, sejumlah kelompok menggelar aksi di beberapa kota. Ini rangkuman lokasi, jam, dan tuntutan yang sudah diumumkan, plus imbauan buat pengguna jalan.
 category: Nasional
 date: 2026-11-09T06:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/images (5).jpeg
+featured: false
+popular: false
+draft: false
 ---
 
 Hari Pahlawan, Selasa 10 November 2026, diperkirakan jadi hari yang padat di sejumlah kota. Beberapa kelompok mahasiswa dan elemen masyarakat sudah mengumumkan rencana aksi. Berikut rangkuman yang bisa dipastikan dari pemberitaan media per Senin 9 November. Jadwal dan titik kumpul bisa berubah, jadi pantau terus kabar terbaru.
