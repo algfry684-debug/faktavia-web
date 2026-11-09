@@ -1,9 +1,13 @@
 ---
-title: "Forum Rakyat Riau Siapkan Aksi di Bundaran PHR, Tuntut 70 Persen Dana Bagi Hasil Migas dan Sawit"
-description: "Forum Rumah Besar Perjuangan Rakyat Riau berencana turun ke jalan 10 November di Pekanbaru. Informasi ini baru bersumber dari satu media daerah."
+title: Forum Rakyat Riau Siapkan Aksi di Bundaran PHR, Tuntut 70 Persen Dana Bagi Hasil Migas dan Sawit
+description: Forum Rumah Besar Perjuangan Rakyat Riau berencana turun ke jalan 10 November di Pekanbaru. Informasi ini baru bersumber dari satu media daerah.
 category: Nasional
 date: 2026-11-08T08:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/forum rakyat riau aksi.webp
+featured: false
+popular: false
+draft: false
 ---
 
 Aksi 10 November tidak hanya berlangsung di Pulau Jawa. Di Pekanbaru, Riau, sebuah forum masyarakat mengumumkan rencana turun ke jalan dengan tuntutan yang berkaitan langsung dengan keuangan daerah.
