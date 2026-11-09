@@ -1,11 +1,15 @@
 ---
-title: "[HOAKS] Pembuatan dan Perpanjangan SIM Gratis 2026"
-description: "Korlantas Polri memastikan tidak ada program SIM gratis 2026. Informasi yang viral di TikTok itu bukan pengumuman resmi."
+title: '[HOAKS] Pembuatan dan Perpanjangan SIM Gratis 2026'
+description: Korlantas Polri memastikan tidak ada program SIM gratis 2026. Informasi yang viral di TikTok itu bukan pengumuman resmi.
 category: Cek Fakta
 date: 2026-11-06T08:00:00.000Z
 author: Redaksi Faktavia
-verdict: HOAKS
+image: /uploads/0411262.jpg
+imageCaption: Himbauan waspada hoaks dikeluarkan oleh media sosial korlantas POLRI
+featured: false
 popular: true
+verdict: HOAKS
+draft: false
 ---
 
 ## Klaim
