@@ -1,11 +1,14 @@
 ---
-title: "Bareskrim Tetapkan Tersangka Keempat di Kasus Dugaan Penyadapan Presiden"
-description: "Irjen Slamet Uliandi ditetapkan sebagai tersangka baru. Polri juga menyiapkan sidang kode etik untuk empat perwira tinggi yang terseret perkara ini."
+title: Bareskrim Tetapkan Tersangka Keempat di Kasus Dugaan Penyadapan Presiden
+description: Irjen Slamet Uliandi ditetapkan sebagai tersangka baru. Polri juga menyiapkan sidang kode etik untuk empat perwira tinggi yang terseret perkara ini.
 category: Nasional
 date: 2026-11-08T03:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/vDrByOAK3B.webp
+imageCaption: Konferensi Pers Bareskrim POLRI
 featured: true
 popular: true
+draft: false
 ---
 
 Kasus dugaan penyadapan ilegal terhadap Presiden Prabowo Subianto bertambah satu tersangka. Pada Kamis (5/11/2026), Bareskrim Polri menetapkan Irjen Slamet Uliandi sebagai tersangka keempat, dua hari setelah tiga perwira tinggi Polri lebih dulu diumumkan sebagai tersangka.
