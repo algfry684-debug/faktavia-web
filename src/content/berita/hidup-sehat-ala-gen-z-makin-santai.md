@@ -1,9 +1,13 @@
 ---
-title: "Hidup Sehat Ala Gen Z Makin Santai: Tidur Cukup, Makan Sadar, dan Waktu untuk Recharge"
-description: "Gaya hidup sehat anak muda kini tak melulu soal diet ketat dan olahraga berat. Kebiasaan kecil yang konsisten jadi kuncinya."
+title: 'Hidup Sehat Ala Gen Z Makin Santai: Tidur Cukup, Makan Sadar, dan Waktu untuk Recharge'
+description: Gaya hidup sehat anak muda kini tak melulu soal diet ketat dan olahraga berat. Kebiasaan kecil yang konsisten jadi kuncinya.
 category: Gaya Hidup
 date: 2026-11-08T08:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/olahraga.jpg
+featured: false
+popular: false
+draft: false
 ---
 
 Kalau dulu hidup sehat identik dengan diet ketat dan jadwal gym yang melelahkan, banyak Gen Z kini memilih jalan yang lebih santai dan personal. Pemberitaan kesehatan sepanjang 2026 menunjukkan polanya: mulai dari hal kecil, lakukan konsisten.
