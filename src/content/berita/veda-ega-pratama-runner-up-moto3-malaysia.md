@@ -1,10 +1,13 @@
 ---
-title: "Veda Ega Pratama Runner-up Moto3 Malaysia, Tiga Seri Tersisa untuk Kejar Posisi Lebih Tinggi"
-description: "Finis kedua di Sepang jadi hasil terbaik Veda di kelas Moto3. Pembalap Honda Team Asia itu kini menempati peringkat tujuh klasemen."
+title: Veda Ega Pratama Runner-up Moto3 Malaysia, Tiga Seri Tersisa untuk Kejar Posisi Lebih Tinggi
+description: Finis kedua di Sepang jadi hasil terbaik Veda di kelas Moto3. Pembalap Honda Team Asia itu kini menempati peringkat tujuh klasemen.
 category: Olahraga
 date: 2026-11-07T07:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/94fd772917380a57b84fdc1424217156.jpg
+featured: false
 popular: true
+draft: false
 ---
 
 Pembalap muda Indonesia, Veda Ega Pratama, finis di posisi kedua pada Moto3 Malaysia di Sirkuit Sepang, Minggu (1/11/2026). Itu hasil terbaiknya sepanjang karier di kelas Moto3, sekaligus podium keduanya musim ini bersama Honda Team Asia.
