@@ -1,9 +1,13 @@
 ---
-title: "Tarif Listrik November 2026 Tidak Naik, Ini Daftar Tarif per Golongan"
-description: "Pemerintah dan PLN belum mengumumkan perubahan tarif untuk triwulan IV 2026. Berikut tarif per kWh yang masih berlaku."
+title: Tarif Listrik November 2026 Tidak Naik, Ini Daftar Tarif per Golongan
+description: Pemerintah dan PLN belum mengumumkan perubahan tarif untuk triwulan IV 2026. Berikut tarif per kWh yang masih berlaku.
 category: Ekonomi
 date: 2026-11-08T01:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/images (4).jpeg
+featured: false
+popular: false
+draft: false
 ---
 
 Pelanggan PLN bisa tenang untuk bulan ini. Hingga 2 November 2026, pemerintah maupun PLN belum menyampaikan perubahan tarif listrik untuk triwulan IV 2026, sehingga tarif yang berlaku masih sama dengan periode sebelumnya.
