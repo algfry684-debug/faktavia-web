@@ -1,9 +1,13 @@
 ---
-title: "Pemerintah Pilih Jalur Etika dan Sosialisasi untuk AI, Pemda Didorong Ikut Beradaptasi"
-description: "Komdigi menilai pendekatan aturan ketat belum tepat untuk AI yang masih berkembang. Pemerintah daerah diminta mulai memanfaatkan AI untuk layanan publik."
+title: Pemerintah Pilih Jalur Etika dan Sosialisasi untuk AI, Pemda Didorong Ikut Beradaptasi
+description: Komdigi menilai pendekatan aturan ketat belum tepat untuk AI yang masih berkembang. Pemerintah daerah diminta mulai memanfaatkan AI untuk layanan publik.
 category: Teknologi
 date: 2026-11-06T04:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/images (3).jpeg
+featured: false
+popular: false
+draft: false
 ---
 
 Bagaimana pemerintah mengatur kecerdasan buatan (AI)? Dua pernyataan pejabat Kementerian Komunikasi dan Digital (Komdigi) pekan ini memberi gambaran arahnya: lebih menekankan etika dan sosialisasi, sambil mendorong pemerintah daerah mulai memakai AI.
