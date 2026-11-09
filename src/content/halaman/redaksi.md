@@ -5,10 +5,10 @@ description: Susunan redaksi Faktavia.id.
 
 ## Susunan Redaksi
 
-- Pemimpin Redaksi: Abdurrahman Siregar, S.H.
-- Redaktur: -
+- Pemimpin Redaksi: Abdul rahman Halim Uluputy
+- Redaktur: Joshua Sulaiman
 - Reporter: Alghifary, Hanif, Fitya R.
 
 ## Alamat Redaksi
 
-_Harmoni, Jakarta Pusat._
+_Jl. Hasyim Asy'ary, Harmoni, Jakarta Pusat._
