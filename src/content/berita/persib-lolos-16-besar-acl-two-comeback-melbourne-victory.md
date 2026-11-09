@@ -1,9 +1,13 @@
 ---
-title: "Persib Tembus 16 Besar ACL Two Usai Comeback 2-1 di Markas Melbourne Victory"
-description: "Menang empat kali dari empat laga, Maung Bandung memastikan tiket babak 16 besar lebih awal dan memuncaki Grup E."
+title: Persib Tembus 16 Besar ACL Two Usai Comeback 2-1 di Markas Melbourne Victory
+description: Menang empat kali dari empat laga, Maung Bandung memastikan tiket babak 16 besar lebih awal dan memuncaki Grup E.
 category: Olahraga
 date: 2026-11-06T06:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/InShot_20261105_205121895-587351658.webp
+featured: false
+popular: false
+draft: false
 ---
 
 Persib Bandung memastikan diri melaju ke babak 16 besar AFC Champions League Two (ACL Two) 2026/2027. Tiket itu didapat setelah mereka membalikkan keadaan dan menang 2-1 atas Melbourne Victory di AAMI Park, Australia, Rabu (4/11/2026).
