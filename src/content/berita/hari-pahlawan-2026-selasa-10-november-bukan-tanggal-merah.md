@@ -1,9 +1,13 @@
 ---
-title: "Hari Pahlawan 2026 Jatuh pada Selasa 10 November, Bukan Tanggal Merah"
-description: "Kantor, sekolah, dan layanan publik tetap berjalan seperti biasa. Ini hal-hal yang perlu diketahui menjelang peringatan 10 November 2026."
+title: Hari Pahlawan 2026 Jatuh pada Selasa 10 November, Bukan Tanggal Merah
+description: Kantor, sekolah, dan layanan publik tetap berjalan seperti biasa. Ini hal-hal yang perlu diketahui menjelang peringatan 10 November 2026.
 category: Nasional
 date: 2026-11-09T01:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/20231115_1700034099_9dac0ef08004e345ce82.jpg
+featured: false
+popular: false
+draft: false
 ---
 
 Hari Pahlawan tahun ini jatuh pada **Selasa, 10 November 2026**. Tanggal tersebut berstatus hari nasional, tetapi bukan hari libur. Kantor, sekolah, dan layanan publik tetap beroperasi seperti hari kerja biasa.
