@@ -1,10 +1,15 @@
 ---
-title: "[HOAKS] Link Pendaftaran CPNS 2026 di Bio Media Sosial, Minta Nama Lengkap dan Nomor Telegram"
-description: "Cek Fakta Liputan6 menemukan tiga klaim pendaftaran CPNS 2026 yang menyesatkan pelamar. Semuanya mengarah ke formulir yang meminta data pribadi."
+title: '[HOAKS] Link Pendaftaran CPNS 2026 di Bio Media Sosial, Minta Nama Lengkap dan Nomor Telegram'
+description: Cek Fakta Liputan6 menemukan tiga klaim pendaftaran CPNS 2026 yang menyesatkan pelamar. Semuanya mengarah ke formulir yang meminta data pribadi.
 category: Cek Fakta
 date: 2026-11-07T10:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/images (1).jpeg
+imageCaption: contoh hoaks CPNS 2026 yang beredar di media sosial
+featured: false
+popular: false
 verdict: HOAKS
+draft: false
 ---
 
 ## Klaim
