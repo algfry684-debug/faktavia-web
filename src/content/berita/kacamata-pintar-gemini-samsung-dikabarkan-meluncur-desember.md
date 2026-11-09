@@ -1,9 +1,13 @@
 ---
-title: "Kacamata Pintar Gemini Samsung Dikabarkan Meluncur Desember, Tahap Awal di AS dan Korea Selatan"
-description: "Samsung bersiap menantang Meta di pasar kacamata pintar. Harga belum diumumkan dan ketersediaan di Indonesia belum jelas."
+title: Kacamata Pintar Gemini Samsung Dikabarkan Meluncur Desember, Tahap Awal di AS dan Korea Selatan
+description: Samsung bersiap menantang Meta di pasar kacamata pintar. Harga belum diumumkan dan ketersediaan di Indonesia belum jelas.
 category: Teknologi
 date: 2026-11-08T05:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/images (2).jpeg
+featured: false
+popular: false
+draft: false
 ---
 
 Samsung bersiap masuk ke pasar kacamata pintar. Menurut laporan TechRepublic (3/11/2026), kacamata berbasis Gemini milik Samsung berpotensi meluncur pada Desember, dengan Amerika Serikat dan Korea Selatan sebagai pasar awal. Ini masih berstatus laporan, bukan pengumuman resmi tanggal rilis.
