@@ -5,8 +5,8 @@ category: Nasional
 date: 2026-11-09T06:00:00.000Z
 author: Redaksi Faktavia
 image: /uploads/images (5).jpeg
-featured: false
-popular: false
+featured: true
+popular: true
 draft: false
 ---
 
