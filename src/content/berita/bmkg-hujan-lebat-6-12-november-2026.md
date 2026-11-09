@@ -1,9 +1,13 @@
 ---
-title: "El Nino Kuat, tapi BMKG Tetap Wanti-wanti Hujan Lebat Periode 6–12 November"
-description: "Hujan ringan mendominasi awal pekan ini, namun potensi hujan lebat hingga sangat lebat tetap perlu diwaspadai di sejumlah wilayah, terutama Sumatra mulai 9 November."
+title: El Nino Kuat, tapi BMKG Tetap Wanti-wanti Hujan Lebat Periode 6–12 November
+description: Hujan ringan mendominasi awal pekan ini, namun potensi hujan lebat hingga sangat lebat tetap perlu diwaspadai di sejumlah wilayah, terutama Sumatra mulai 9 November.
 category: Nasional
 date: 2026-11-07T01:30:00.000Z
 author: Redaksi Faktavia
+image: /uploads/Indo_SSTA_latest.webp
+featured: false
+popular: false
+draft: false
 ---
 
 Fenomena El Nino yang disebut sangat kuat memang menekan curah hujan di banyak daerah, tetapi BMKG mengingatkan bahwa hujan lebat hingga ekstrem masih bisa terjadi lokal. Peringatan ini berlaku untuk periode 6–12 November 2026.
