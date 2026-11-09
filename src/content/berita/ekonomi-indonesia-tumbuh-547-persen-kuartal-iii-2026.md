@@ -1,10 +1,13 @@
 ---
-title: "Ekonomi Indonesia Tumbuh 5,47 Persen di Kuartal III 2026, Lampaui Perkiraan Ekonom"
-description: "BPS mencatat pertumbuhan tahunan 5,47 persen. Industri pengolahan jadi sumber pertumbuhan terbesar, konsumsi rumah tangga masih jadi penopang utama."
+title: Ekonomi Indonesia Tumbuh 5,47 Persen di Kuartal III 2026, Lampaui Perkiraan Ekonom
+description: BPS mencatat pertumbuhan tahunan 5,47 persen. Industri pengolahan jadi sumber pertumbuhan terbesar, konsumsi rumah tangga masih jadi penopang utama.
 category: Ekonomi
 date: 2026-11-06T02:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/ekonomi-1.jpg
+featured: false
 popular: true
+draft: false
 ---
 
 Ekonomi Indonesia tumbuh **5,47 persen** secara tahunan (year-on-year) pada kuartal III 2026. Angka ini diumumkan Badan Pusat Statistik (BPS) pada Kamis (5/11/2026) dan lebih tinggi dari median perkiraan ekonom, yakni 5,2 persen.
