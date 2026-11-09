@@ -1,9 +1,13 @@
 ---
-title: "Timnas U-17 Berburu Tiket Piala Asia 2027: Kualifikasi Digelar 8–20 November"
-description: "Garuda Muda berada di Grup A bersama Myanmar, Afghanistan, Filipina, dan Kamboja. Hanya juara grup yang lolos ke putaran final di Uzbekistan."
+title: 'Timnas U-17 Berburu Tiket Piala Asia 2027: Kualifikasi Digelar 8–20 November'
+description: Garuda Muda berada di Grup A bersama Myanmar, Afghanistan, Filipina, dan Kamboja. Hanya juara grup yang lolos ke putaran final di Uzbekistan.
 category: Olahraga
 date: 2026-11-08T10:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/images.webp
+featured: false
+popular: false
+draft: false
 ---
 
 Timnas Indonesia U-17 memulai perburuan tiket Piala Asia U-17 2027. Kualifikasi digelar terpusat pada 8–20 November 2026, dan Garuda Muda dijadwalkan memainkan laga pertamanya pada 11 November menurut pemberitaan sejumlah media. Cek jadwal resmi PSSI untuk jam tayang terbaru.
