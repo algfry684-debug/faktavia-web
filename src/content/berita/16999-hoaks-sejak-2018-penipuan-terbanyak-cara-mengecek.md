@@ -1,9 +1,13 @@
 ---
-title: "16.999 Hoaks Sejak 2018, Penipuan Paling Banyak: Begini Cara Mengeceknya Sebelum Share"
-description: "Komdigi mencatat belasan ribu hoaks dalam delapan tahun terakhir. Hoaks penipuan jadi yang terbanyak, dan banyak yang kini memakai gambar atau suara buatan AI."
+title: '16.999 Hoaks Sejak 2018, Penipuan Paling Banyak: Begini Cara Mengeceknya Sebelum Share'
+description: Komdigi mencatat belasan ribu hoaks dalam delapan tahun terakhir. Hoaks penipuan jadi yang terbanyak, dan banyak yang kini memakai gambar atau suara buatan AI.
 category: Cek Fakta
 date: 2026-11-08T12:00:00.000Z
 author: Redaksi Faktavia
+image: /uploads/pngtree-red-simple-hoax-sign-with-stamp-effect-for-misinformation-fake-news-png-image_20706049.png
+featured: false
+popular: false
+draft: false
 ---
 
 Sebelum menekan tombol share, ada baiknya melihat data ini. Kementerian Komunikasi dan Digital (Komdigi) mencatat **16.999 hoaks** yang beredar di media sosial sejak 1 Agustus 2018 hingga 29 Juli 2026. Lonjakan terbesar terjadi pada 2019.
