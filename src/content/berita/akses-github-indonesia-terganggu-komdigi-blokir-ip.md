@@ -3,7 +3,7 @@ title: "Akses GitHub di Indonesia Sempat Terganggu Sekitar 4 Jam, Komdigi Jelask
 description: "Pemblokiran alamat IP terkait dugaan serangan malware ternyata ikut mengenai layanan GitHub. Akses kini dipulihkan dan Komdigi berjanji mengevaluasi prosesnya."
 category: Teknologi
 date: 2026-11-07T03:00:00.000Z
-author: Redaksi Faktavia
+author: Redaksi Faktavia.id
 ---
 
 Pengembang di Indonesia sempat kesulitan membuka GitHub pada Jumat (6/11/2026). Gangguan berlangsung sekitar empat jam sebelum akses kembali normal.
