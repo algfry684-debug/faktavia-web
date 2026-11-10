@@ -1,10 +1,13 @@
 ---
-title: "Hidayat Nur Wahid Mundur dari Kursi Wakil Ketua MPR, Muzani: Surat Sudah Diterima Pimpinan"
-description: "Ketua MPR Ahmad Muzani mengumumkan pimpinan MPR menerima surat pengunduran diri Hidayat Nur Wahid. Alasan pengunduran diri belum disampaikan secara terbuka."
+title: 'Hidayat Nur Wahid Mundur dari Kursi Wakil Ketua MPR, Muzani: Surat Sudah Diterima Pimpinan'
+description: Ketua MPR Ahmad Muzani mengumumkan pimpinan MPR menerima surat pengunduran diri Hidayat Nur Wahid. Alasan pengunduran diri belum disampaikan secara terbuka.
 category: Nasional
 date: 2026-11-10T14:10:00.000Z
 author: Redaksi Faktavia
+image: /uploads/Screen Shot 2026-11-10 at 22.11.26.png
+featured: false
 popular: true
+draft: false
 ---
 
 Politikus PKS Hidayat Nur Wahid (HNW) mengundurkan diri dari jabatan Wakil Ketua MPR RI. Kabar ini disampaikan Ketua MPR Ahmad Muzani pada Selasa (10/11/2026) malam, sekitar pukul 20.40–21.00 WIB.
