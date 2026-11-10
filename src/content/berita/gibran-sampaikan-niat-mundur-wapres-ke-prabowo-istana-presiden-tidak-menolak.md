@@ -1,11 +1,13 @@
 ---
-title: "BREAKING: Gibran Sampaikan Niat Mundur sebagai Wapres ke Prabowo, Istana: Presiden Tidak Menolak, Beri Saran"
-description: "Mensesneg Prasetyo Hadi mengonfirmasi Wapres Gibran menyatakan niat mengundurkan diri dalam pertemuan 2,5 jam dengan Presiden Prabowo. Gibran masih menjabat dan belum ada pengunduran diri resmi yang diumumkan."
+title: 'BREAKING: Gibran Sampaikan Niat Mundur sebagai Wapres ke Prabowo, Istana: Presiden Tidak Menolak, Beri Saran'
+description: Mensesneg Prasetyo Hadi mengonfirmasi Wapres Gibran menyatakan niat mengundurkan diri dalam pertemuan 2,5 jam dengan Presiden Prabowo. Gibran masih menjabat dan belum ada pengunduran diri resmi yang diumumkan.
 category: Nasional
 date: 2026-11-10T08:35:00.000Z
 author: Redaksi Faktavia
+image: /uploads/pasted-image-1794304260475.png
 featured: true
 popular: true
+draft: false
 ---
 
 Wakil Presiden Gibran Rakabuming Raka menyampaikan niat untuk mengundurkan diri dari jabatannya kepada Presiden Prabowo Subianto. Hal itu dikonfirmasi Menteri Sekretaris Negara sekaligus Juru Bicara Presiden Prasetyo Hadi dalam jumpa pers di Kompleks Istana Kepresidenan, Jakarta, Selasa (10/11/2026) sore.
