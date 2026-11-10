@@ -1,11 +1,13 @@
 ---
-title: "Gibran Jelaskan Niat Mundur: Jalur Hukum Ijazah Jalan Terus, Prabowo Beri Banyak Saran"
-description: "Usai bertemu Prabowo dan menghadiri penganugerahan Pahlawan Nasional, Wapres Gibran memberi penjelasan di Istana Wapres. Ia menegaskan akan tetap menempuh PTUN dan PK, sementara Puan meminta publik tidak berspekulasi."
+title: 'Gibran Jelaskan Niat Mundur: Jalur Hukum Ijazah Jalan Terus, Prabowo Beri Banyak Saran'
+description: Usai bertemu Prabowo dan menghadiri penganugerahan Pahlawan Nasional, Wapres Gibran memberi penjelasan di Istana Wapres. Ia menegaskan akan tetap menempuh PTUN dan PK, sementara Puan meminta publik tidak berspekulasi.
 category: Nasional
 date: 2026-11-10T09:55:00.000Z
 author: Redaksi Faktavia
+image: /uploads/pasted-image-1794323171734.png
 featured: true
 popular: true
+draft: false
 ---
 
 Wakil Presiden Gibran Rakabuming Raka memberikan penjelasan langsung setelah kabar niatnya mundur dari jabatan ramai dibicarakan. Pernyataan itu disampaikan di Istana Wakil Presiden, Jakarta, Selasa (10/11/2026) sore, setelah ia menghadiri upacara penganugerahan gelar Pahlawan Nasional di Istana Negara.
