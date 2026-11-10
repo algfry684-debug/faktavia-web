@@ -1,9 +1,13 @@
 ---
-title: "Veda Ega Pratama Finis P4 di Moto3 Qatar dan Naik ke Peringkat 6 Klasemen"
-description: "Start dari posisi 14 akibat penalti, pembalap Indonesia itu nyaris naik podium di Lusail dan mengumpulkan 13 poin tambahan."
+title: Veda Ega Pratama Finis P4 di Moto3 Qatar dan Naik ke Peringkat 6 Klasemen
+description: Start dari posisi 14 akibat penalti, pembalap Indonesia itu nyaris naik podium di Lusail dan mengumpulkan 13 poin tambahan.
 category: Olahraga
 date: 2026-11-09T01:30:00.000Z
 author: Redaksi Faktavia
+image: /uploads/94fd772917380a57b84fdc1424217156.jpg
+featured: false
+popular: false
+draft: false
 ---
 
 Veda Ega Pratama tampil impresif di Moto3 Qatar, Minggu 8 November 2026. Meski harus memulai balapan dari posisi ke-14, pembalap Indonesia itu finis keempat, selisih tipis dari podium.
