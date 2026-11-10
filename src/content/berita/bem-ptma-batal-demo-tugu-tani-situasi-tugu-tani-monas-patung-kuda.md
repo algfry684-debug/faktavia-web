@@ -1,9 +1,13 @@
 ---
-title: "BEM PTMA Batal Demo di Tugu Tani, Mahasiswa Lain Tetap Beraksi: Situasi Tugu Tani, Monas, dan Patung Kuda"
-description: "Aksi 'Pulihkan Indonesia' BEM PTMA dibatalkan, tetapi puluhan mahasiswa lain berorasi di Tugu Tani sore ini dan sempat saling dorong dengan polisi. Berikut kondisi tiga titik yang disorot."
+title: 'BEM PTMA Batal Demo di Tugu Tani, Mahasiswa Lain Tetap Beraksi: Situasi Tugu Tani, Monas, dan Patung Kuda'
+description: Aksi 'Pulihkan Indonesia' BEM PTMA dibatalkan, tetapi puluhan mahasiswa lain berorasi di Tugu Tani sore ini dan sempat saling dorong dengan polisi. Berikut kondisi tiga titik yang disorot.
 category: Nasional
 date: 2026-11-10T09:15:00.000Z
 author: Redaksi Faktavia
+image: /uploads/pasted-image-1794323275128.png
+featured: false
+popular: false
+draft: false
 ---
 
 Rencana aksi mahasiswa di Tugu Tani, Jakarta Pusat, berubah di menit-menit akhir. BEM Perguruan Tinggi Muhammadiyah dan Aisyiyah (BEM PTMA) membatalkan aksi "Pulihkan Indonesia", namun kelompok mahasiswa lain tetap berunjuk rasa di sana pada Selasa (10/11/2026) sore.
