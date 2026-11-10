@@ -1,9 +1,13 @@
 ---
-title: "Demokrat Belum Tentukan Sikap soal HMP dan Hak Angket, Tunggu Hasil Bamus"
-description: "Politikus Demokrat Herman Khaeron menyatakan fraksinya belum punya sikap resmi atas usulan HMP terkait Wapres Gibran dan masih menunggu pembahasan di Badan Musyawarah DPR."
+title: Demokrat Belum Tentukan Sikap soal HMP dan Hak Angket, Tunggu Hasil Bamus
+description: Politikus Demokrat Herman Khaeron menyatakan fraksinya belum punya sikap resmi atas usulan HMP terkait Wapres Gibran dan masih menunggu pembahasan di Badan Musyawarah DPR.
 category: Nasional
 date: 2026-11-10T11:35:00.000Z
 author: Redaksi Faktavia
+image: /uploads/pasted-image-1794323680045.png
+featured: false
+popular: false
+draft: false
 ---
 
 Fraksi Partai Demokrat di DPR menyatakan belum mengambil sikap resmi terhadap usulan Hak Menyatakan Pendapat (HMP) maupun Hak Angket yang berkaitan dengan polemik ijazah Wakil Presiden Gibran. Pernyataan itu disampaikan politikus Demokrat Herman Khaeron di sela rapat paripurna DPR, Selasa (10/11/2026).
