@@ -1,9 +1,13 @@
 ---
-title: "Aksi di Yogyakarta Memanas: Gerbang DPRD DIY Dijebol, Bentrokan Pecah di Malioboro"
-description: "Menurut laporan Tribunjogja, ratusan massa menjebol gerbang DPRD DIY dan terlibat bentrokan dengan aparat di Jalan Malioboro. Polisi menggunakan water cannon. Situasi masih berkembang."
+title: 'Aksi di Yogyakarta Memanas: Gerbang DPRD DIY Dijebol, Bentrokan Pecah di Malioboro'
+description: Menurut laporan Tribunjogja, ratusan massa menjebol gerbang DPRD DIY dan terlibat bentrokan dengan aparat di Jalan Malioboro. Polisi menggunakan water cannon. Situasi masih berkembang.
 category: Nasional
 date: 2026-11-10T13:50:00.000Z
 author: Redaksi Faktavia
+image: /uploads/pasted-image-1794323408306.png
+featured: false
+popular: false
+draft: false
 ---
 
 Aksi unjuk rasa di Yogyakarta pada Selasa (10/11/2026) malam berujung bentrokan. Berdasarkan laporan Tribunjogja.com yang terbit pukul 20.37 WIB, ratusan orang menjebol gerbang gedung DPRD DIY, lalu bentrokan kembali pecah di Jalan Malioboro. Berita ini masih berkembang dan bersumber dari satu laporan utama, sehingga detail di bawah perlu dibaca dengan hati-hati.
