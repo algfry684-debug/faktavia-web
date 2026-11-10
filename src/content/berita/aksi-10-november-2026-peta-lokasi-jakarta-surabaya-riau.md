@@ -1,14 +1,12 @@
 ---
-title: 'Aksi 10 November 2026: Peta Lokasi dan Isu yang Dibawa di Jakarta, Surabaya, hingga Riau'
-description: Besok, Selasa 10 November, sejumlah kelompok menggelar aksi di beberapa kota. Ini rangkuman lokasi, jam, dan tuntutan yang sudah diumumkan, plus imbauan buat pengguna jalan.
+title: "Aksi 10 November 2026: Peta Lokasi dan Isu yang Dibawa di Jakarta, Surabaya, hingga Riau (Diperbarui)"
+description: "Besok, Selasa 10 November, sejumlah kelompok menggelar aksi di beberapa kota. Ini rangkuman lokasi, jam, dan tuntutan yang sudah diumumkan, plus imbauan buat pengguna jalan."
 category: Nasional
 date: 2026-11-09T06:00:00.000Z
 author: Redaksi Faktavia
-image: /uploads/images (5).jpeg
-featured: true
-popular: true
-draft: false
 ---
+
+**Pembaruan Selasa 10 November, 16.00 WIB:** BEM PTMA membatalkan aksinya di Tugu Tani. Fokus massa di Jakarta bergeser ke Gedung DPR/MPR dengan tuntutan Gibran mundur atau dimakzulkan. Baca [situasi Tugu Tani, Monas, dan Patung Kuda](/berita/bem-ptma-batal-demo-tugu-tani-situasi-tugu-tani-monas-patung-kuda/) dan [demo di DPR](/berita/demo-di-dpr-hari-pahlawan-massa-desak-gibran-mundur-bam-dpr-terima-perwakilan/). Bagian di bawah ini adalah rangkuman sebelum aksi berlangsung.
 
 Hari Pahlawan, Selasa 10 November 2026, diperkirakan jadi hari yang padat di sejumlah kota. Beberapa kelompok mahasiswa dan elemen masyarakat sudah mengumumkan rencana aksi. Berikut rangkuman yang bisa dipastikan dari pemberitaan media per Senin 9 November. Jadwal dan titik kumpul bisa berubah, jadi pantau terus kabar terbaru.
 
