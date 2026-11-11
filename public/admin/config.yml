@@ -138,6 +138,7 @@ collections:
             fields:
               - { label: Nama Saluran, name: name, widget: string }
               - { label: Kelompok, name: group, widget: select, options: [Nasional, Internasional] }
+              - { label: Boleh ditampilkan di situs ini, name: embed, widget: boolean, default: true, hint: "Matikan kalau layar pemutar selalu menampilkan Video tidak tersedia. Pengunjung akan diberi tombol ke YouTube." }
               - { label: ID Channel YouTube, name: channelId, widget: string, hint: "Diawali UC dan 24 karakter. Cara cari: buka halaman channel resmi di YouTube, lalu lihat ID-nya di Tentang atau di kode sumber. Pastikan channel resmi stasiun TV-nya." }
           - label: Akun X
             name: x

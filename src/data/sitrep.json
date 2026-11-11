@@ -1,12 +1,89 @@
 {
   "tv": [
-    { "name": "Kompas TV", "group": "Nasional", "channelId": "UC5BMIWZe9isJXLZZWPWvBlg" },
-    { "name": "Metro TV", "group": "Nasional", "channelId": "UCzl0OrB3-ehunyotIQvK77A" },
-    { "name": "tvOne", "group": "Nasional", "channelId": "UCER4rvDnRBPr_ncYW4UCZjg" },
-    { "name": "Al Jazeera English", "group": "Internasional", "channelId": "UCNye-wNBqNL5ZzHSJj3l8Bg" },
-    { "name": "DW News", "group": "Internasional", "channelId": "UCknLrEdhRCp1aegoMqRaCZg" },
-    { "name": "Sky News", "group": "Internasional", "channelId": "UCoMdktPbSTixAyNGwb-UYkQ" },
-    { "name": "NHK World-Japan", "group": "Internasional", "channelId": "UCSPEjw8F2nQDtmUKPFNF7_A" }
+    {
+      "name": "Kompas TV",
+      "group": "Nasional",
+      "channelId": "UC5BMIWZe9isJXLZZWPWvBlg",
+      "embed": false
+    },
+    {
+      "name": "Metro TV",
+      "group": "Nasional",
+      "channelId": "UCzl0OrB3-ehunyotIQvK77A",
+      "embed": false
+    },
+    {
+      "name": "tvOne",
+      "group": "Nasional",
+      "channelId": "UCER4rvDnRBPr_ncYW4UCZjg",
+      "embed": false
+    },
+    {
+      "name": "TVRI Nasional",
+      "group": "Nasional",
+      "channelId": "UCyIMsCzDRm8_y_6wM26_PWQ",
+      "embed": true
+    },
+    {
+      "name": "NET News",
+      "group": "Nasional",
+      "channelId": "UCiXtIkOBFYap6xq_n4FlKhA",
+      "embed": true
+    },
+    {
+      "name": "Al Jazeera English",
+      "group": "Internasional",
+      "channelId": "UCNye-wNBqNL5ZzHSJj3l8Bg",
+      "embed": true
+    },
+    {
+      "name": "DW News",
+      "group": "Internasional",
+      "channelId": "UCknLrEdhRCp1aegoMqRaCZg",
+      "embed": true
+    },
+    {
+      "name": "France 24 English",
+      "group": "Internasional",
+      "channelId": "UCQfwfsi5VrQ8yKZ-UWmAEFg",
+      "embed": true
+    },
+    {
+      "name": "Euronews",
+      "group": "Internasional",
+      "channelId": "UCSrZ3UV4jOidv8ppoVuvW9Q",
+      "embed": true
+    },
+    {
+      "name": "Sky News",
+      "group": "Internasional",
+      "channelId": "UCoMdktPbSTixAyNGwb-UYkQ",
+      "embed": true
+    },
+    {
+      "name": "NHK World-Japan",
+      "group": "Internasional",
+      "channelId": "UCSPEjw8F2nQDtmUKPFNF7_A",
+      "embed": true
+    },
+    {
+      "name": "ABC News Australia",
+      "group": "Internasional",
+      "channelId": "UCVgO39Bk5sMo66-6o6Spn6Q",
+      "embed": true
+    },
+    {
+      "name": "TRT World",
+      "group": "Internasional",
+      "channelId": "UC7fWeaHhqgM4Ry-RMpM2YYw",
+      "embed": true
+    },
+    {
+      "name": "Bloomberg Television",
+      "group": "Internasional",
+      "channelId": "UCIALMKvObZNtJ6AmdCLP7Lg",
+      "embed": true
+    }
   ],
   "cctv": [
     {
@@ -25,7 +102,15 @@
     }
   ],
   "x": [
-    { "label": "BMKG", "handle": "infoBMKG", "group": "Lembaga" },
-    { "label": "BNPB", "handle": "BNPB_Indonesia", "group": "Lembaga" }
+    {
+      "label": "BMKG",
+      "handle": "infoBMKG",
+      "group": "Lembaga"
+    },
+    {
+      "label": "BNPB",
+      "handle": "BNPB_Indonesia",
+      "group": "Lembaga"
+    }
   ]
 }

@@ -8,7 +8,7 @@ type Insiden = {
 };
 type Cam = { name: string; type: 'iframe' | 'youtube' | 'hls' | 'image'; url: string; openUrl?: string; note?: string };
 type XAcc = { label: string; handle: string; group?: string };
-type Tv = { name: string; group: string; channelId: string };
+type Tv = { name: string; group: string; channelId: string; embed?: boolean };
 
 const cfg = JSON.parse(document.getElementById('sitrep-config')!.textContent || '{}') as {
   insiden: Insiden[]; cctv: Cam[]; x: XAcc[]; tv: Tv[];
@@ -481,6 +481,7 @@ function setupTv() {
   const ytLink = (c: Tv) => `https://www.youtube.com/channel/${c.channelId}/live`;
 
   const showIdle = () => {
+    if (current.embed === false) return playOne();
     stage.replaceChildren();
     const box = h('div', 'tv-actions');
     const play = h('button', 'btn btn-amber', 'Putar ' + current.name);
@@ -493,6 +494,17 @@ function setupTv() {
   };
   const playOne = () => {
     stage.replaceChildren();
+    if (current.embed === false) {
+      const box = h('div', 'tv-actions');
+      box.style.flexDirection = 'column';
+      box.style.alignItems = 'center';
+      box.append(h('p', 'state', current.name + ' tidak mengizinkan siarannya ditampilkan di situs lain. Tonton langsung di kanal resminya:'));
+      const open = h('a', 'btn btn-amber', 'Tonton ' + current.name + ' di YouTube');
+      open.href = ytLink(current); open.target = '_blank'; open.rel = 'noopener noreferrer';
+      box.append(open);
+      stage.append(box);
+      return;
+    }
     const wrap = h('div', 'tv-one');
     wrap.append(tvFrame(current));
     stage.append(wrap);
@@ -505,10 +517,13 @@ function setupTv() {
   const playGrid = () => {
     stage.replaceChildren();
     const g = h('div', 'tv-grid');
-    const four = list.filter((c) => c.group === group).concat(list.filter((c) => c.group !== group)).slice(0, 4);
+    const ok = list.filter((c) => c.embed !== false);
+    const four = ok.filter((c) => c.group === group).concat(ok.filter((c) => c.group !== group)).slice(0, 4);
     for (const c of four) {
       const cell = h('div', 'tv-cell');
-      cell.append(h('span', '', c.name), tvFrame(c));
+      const lab = h('a', 'tv-lab', c.name + ' ↗');
+      lab.href = ytLink(c); lab.target = '_blank'; lab.rel = 'noopener noreferrer';
+      cell.append(lab, tvFrame(c));
       g.append(cell);
     }
     stage.append(g);
