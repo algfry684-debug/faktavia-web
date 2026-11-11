@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { getPosts, KATEGORI, catUrl, postUrl, fmtDate, readMinutes } from '../lib/site';
+import situs from '../data/situs.json';
+
+const posts = await getPosts();
+const feature = posts.find((p) => p.data.featured) ?? posts[0];
+const popularFlagged = posts.filter((p) => p.data.popular && p !== feature);
+const trending = (popularFlagged.length ? popularFlagged : posts.filter((p) => p !== feature)).slice(0, 5);
+const latest = posts.filter((p) => p !== feature).slice(0, 9);
+const facts = posts.filter((p) => p.data.category === 'Cek Fakta').slice(0, 3);
+
+const socials = [
+  { name: 'WhatsApp Channel', url: situs.whatsapp },
+  { name: 'Instagram', url: situs.instagram },
+  { name: 'TikTok', url: situs.tiktok },
+  { name: 'X (Twitter)', url: situs.x },
+].filter((s) => s.url);
+
+const verdictClass = { HOAKS: 'v-hoaks', FAKTA: 'v-fakta', MENYESATKAN: 'v-sesat' } as const;
+---
+<BaseLayout>
+  <section class="hero" aria-labelledby="judul">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span>Portal Berita Indonesia</span>
+        <h1 class="title" id="judul">Fakta dulu, <mark>baru</mark> viral.</h1>
+        <p class="lead">Faktavia.id merangkum kabar Indonesia dengan bahasa yang santai, tampilan yang rapi, dan sumber yang jelas. Buat kamu yang mau update tanpa takut salah info.</p>
+        <div class="cta">
+          <a class="btn btn-amber" href="/terbaru/">Baca Berita Terkini</a>
+          <a class="btn btn-ghost" href={catUrl('Cek Fakta')}>Lihat Cek Fakta</a>
+        </div>
+        <div class="facts">
+          <span>Update harian</span>
+          <span>Bahasa yang gampang dicerna</span>
+          <span>Sumber dicantumkan</span>
+        </div>
+      </div>
+
+      {feature ? (
+        <a class="feature" href={postUrl(feature.id)} aria-label={`Berita utama: ${feature.data.title}`}
+           style={feature.data.image ? `background-image: linear-gradient(180deg, rgba(10,38,68,.15), rgba(7,22,42,.85)), url('${feature.data.image}'); background-size: cover; background-position: center;` : undefined}>
+          <img class="mark" src="/assets/icon-white.png" alt="" />
+          <span class="tag">Berita Utama</span>
+          <h2>{feature.data.title}</h2>
+          <p>{feature.data.description}</p>
+          <div class="meta"><span>{feature.data.author}</span><span>{fmtDate(feature.data.date)}</span><span>{readMinutes(feature.body)} menit baca</span></div>
+        </a>
+      ) : (
+        <div class="feature hero-empty">
+          <img class="mark" src="/assets/icon-white.png" alt="" />
+          <h2>Berita pertama segera tayang</h2>
+          <p>Tulis berita lewat halaman admin, dan berita utamamu akan muncul di sini.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section aria-label="Sitrep">
+    <div class="wrap">
+      <a class="sr-teaser" href="/sitrep/">
+        <span class="live-dot"></span>
+        <span><strong>Sitrep Faktavia</strong> Peta insiden, gempa, cuaca, titik panas, CCTV, dan wire berita dalam satu layar.</span>
+        <span class="go">Buka Situation Room →</span>
+      </a>
+    </div>
+  </section>
+
+  {trending.length > 0 && (
+    <section aria-labelledby="rame">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="sec" id="rame"><small>Pilihan redaksi</small>Lagi Rame</h2>
+        </div>
+        <ol class="trend">
+          {trending.map((p, i) => (
+            <li>
+              <a href={postUrl(p.id)}>
+                <span class="num">0{i + 1}</span>
+                <h3>{p.data.title}</h3>
+                <small>{p.data.category} · {fmtDate(p.data.date)}</small>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )}
+
+  <section id="terbaru" aria-labelledby="terbaruJudul">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec" id="terbaruJudul"><small>Baru naik</small>Berita Terbaru</h2>
+        <div class="chips" aria-label="Kategori">
+          <a class="chip active" href="/terbaru/">Semua</a>
+          {KATEGORI.filter((k) => k !== 'Cek Fakta').map((k) => <a class="chip" href={catUrl(k)}>{k}</a>)}
+        </div>
+      </div>
+      {latest.length > 0 ? (
+        <div class="grid">{latest.map((p) => <PostCard post={p} />)}</div>
+      ) : (
+        <p class="empty">Belum ada berita lain. Tulis berita di halaman admin untuk mengisi bagian ini.</p>
+      )}
+      <div class="more"><a class="btn btn-navy" href="/terbaru/">Lihat Semua Berita</a></div>
+    </div>
+  </section>
+
+  {facts.length > 0 && (
+    <div class="wrap">
+      <section class="fact-sec" id="cek-fakta" aria-labelledby="cekJudul">
+        <div class="wrap">
+          <h2 class="sec" id="cekJudul"><small>Anti kena tipu</small>Cek Fakta</h2>
+          <p class="lead">Ada kabar yang bikin ragu? Di sini kami periksa klaim yang beredar dan tunjukkan buktinya.</p>
+          <div class="checks">
+            {facts.map((p) => (
+              <a class="check" href={postUrl(p.id)}>
+                {p.data.verdict && <span class={`verdict ${verdictClass[p.data.verdict]}`}>{p.data.verdict}</span>}
+                <h3>{p.data.title}</h3>
+                <p>{p.data.description}</p>
+              </a>
+            ))}
+          </div>
+          <div class="more"><a class="btn btn-amber" href={catUrl('Cek Fakta')}>Semua Cek Fakta</a></div>
+        </div>
+      </section>
+    </div>
+  )}
+
+  {socials.length > 0 && (
+    <div class="wrap">
+      <section class="follow" id="ikuti" aria-labelledby="ikutiJudul">
+        <div>
+          <h2 id="ikutiJudul">Jangan cuma scroll. Ikuti yang jelas sumbernya.</h2>
+          <p>Dapatkan berita Faktavia langsung di aplikasi yang kamu pakai tiap hari.</p>
+        </div>
+        <div class="socials">
+          {socials.map((s) => <a class="btn" href={s.url} target="_blank" rel="noopener">{s.name}</a>)}
+        </div>
+      </section>
+    </div>
+  )}
+</BaseLayout>
