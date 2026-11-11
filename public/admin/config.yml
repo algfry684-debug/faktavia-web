@@ -51,6 +51,45 @@ collections:
       - { label: Draft (belum tayang), name: draft, widget: boolean, default: false, hint: "Centang kalau belum mau ditampilkan di website." }
       - { label: Isi Berita, name: body, widget: markdown }
 
+  # ================= SITREP: INSIDEN =================
+  - name: insiden
+    label: Sitrep - Catatan Insiden
+    label_singular: Insiden
+    folder: src/content/insiden
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{type}}, {{status}})"
+    sortable_fields: [time, title, status]
+    fields:
+      - { label: Judul Insiden, name: title, widget: string, hint: "Singkat dan faktual. Contoh: Banjir rendam 3 kelurahan di Jakarta Timur" }
+      - label: Jenis
+        name: type
+        widget: select
+        options: [Demo, Kebakaran, Banjir, Gempa, Longsor, Bencana Lain, Kecelakaan, Keamanan, Lainnya]
+      - label: Status
+        name: status
+        widget: select
+        options: [Dipantau, Terverifikasi, Mereda]
+        default: Dipantau
+        hint: "Dipantau = baru satu sumber atau belum jelas. Terverifikasi = ada sumber resmi atau lebih dari satu media tepercaya. Mereda = situasi sudah selesai."
+      - label: Tingkat
+        name: severity
+        widget: select
+        options: [Rendah, Sedang, Tinggi]
+        default: Sedang
+      - { label: Nama Lokasi, name: place, widget: string, hint: "Contoh: Jl. Malioboro, Yogyakarta" }
+      - { label: Provinsi, name: province, widget: string, required: false }
+      - { label: Lintang (latitude), name: lat, widget: number, value_type: float, min: -12, max: 7, hint: "Buka Google Maps, klik kanan lokasi, salin angka pertama. Indonesia selatan khatulistiwa bernilai negatif, misalnya -6.2" }
+      - { label: Bujur (longitude), name: lng, widget: number, value_type: float, min: 94, max: 142, hint: "Angka kedua dari Google Maps, misalnya 106.8" }
+      - { label: Waktu Kejadian, name: time, widget: datetime }
+      - { label: Keterangan, name: description, widget: text, hint: "1-3 kalimat. Tulis sumbernya dan tandai kalau masih satu sumber atau lokasinya perkiraan." }
+      - { label: Nama Sumber, name: sourceName, widget: string, required: false }
+      - { label: Tautan Sumber, name: sourceUrl, widget: string, required: false, hint: "Alamat lengkap yang diawali https://" }
+      - { label: Nama File Berita Faktavia Terkait, name: relatedArticle, widget: string, required: false, hint: "Isi dengan bagian alamat berita setelah /berita/ (tanpa garis miring di ujung). Boleh kosong." }
+      - { label: Sembunyikan dari Sitrep, name: hidden, widget: boolean, default: false }
+
   # ================= HALAMAN =================
   - name: halaman
     label: Halaman (Tentang Kami, dll)
@@ -78,3 +117,24 @@ collections:
           - { label: Link Instagram, name: instagram, widget: string, required: false, hint: "Misalnya https://instagram.com/namaakun" }
           - { label: Link TikTok, name: tiktok, widget: string, required: false }
           - { label: Link X (Twitter), name: x, widget: string, required: false }
+      - name: sitrep
+        label: Pengaturan Sitrep (CCTV dan akun X)
+        file: src/data/sitrep.json
+        fields:
+          - label: Daftar CCTV
+            name: cctv
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Nama Kamera, name: name, widget: string }
+              - { label: Jenis Siaran, name: type, widget: select, options: [iframe, youtube, hls, image], hint: "iframe = halaman web yang boleh ditampilkan. youtube = siaran langsung YouTube. hls = alamat .m3u8. image = foto yang diperbarui berkala." }
+              - { label: Alamat Siaran, name: url, widget: string, hint: "Harus diawali https://. Untuk youtube boleh isi ID video atau link-nya." }
+              - { label: Alamat Buka di Tab Baru, name: openUrl, widget: string, required: false }
+              - { label: Catatan, name: note, widget: string, required: false }
+          - label: Akun X
+            name: x
+            widget: list
+            summary: "{{fields.label}} (@{{fields.handle}})"
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Username tanpa @, name: handle, widget: string }
