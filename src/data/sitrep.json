@@ -1,4 +1,13 @@
 {
+  "tv": [
+    { "name": "Kompas TV", "group": "Nasional", "channelId": "UC5BMIWZe9isJXLZZWPWvBlg" },
+    { "name": "Metro TV", "group": "Nasional", "channelId": "UCzl0OrB3-ehunyotIQvK77A" },
+    { "name": "tvOne", "group": "Nasional", "channelId": "UCER4rvDnRBPr_ncYW4UCZjg" },
+    { "name": "Al Jazeera English", "group": "Internasional", "channelId": "UCNye-wNBqNL5ZzHSJj3l8Bg" },
+    { "name": "DW News", "group": "Internasional", "channelId": "UCknLrEdhRCp1aegoMqRaCZg" },
+    { "name": "Sky News", "group": "Internasional", "channelId": "UCoMdktPbSTixAyNGwb-UYkQ" },
+    { "name": "NHK World-Japan", "group": "Internasional", "channelId": "UCSPEjw8F2nQDtmUKPFNF7_A" }
+  ],
   "cctv": [
     {
       "name": "CCTV Publik DKI Jakarta (resmi)",
@@ -16,7 +25,7 @@
     }
   ],
   "x": [
-    { "label": "BMKG", "handle": "infoBMKG" },
-    { "label": "BNPB", "handle": "BNPB_Indonesia" }
+    { "label": "BMKG", "handle": "infoBMKG", "group": "Lembaga" },
+    { "label": "BNPB", "handle": "BNPB_Indonesia", "group": "Lembaga" }
   ]
 }

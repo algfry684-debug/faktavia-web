@@ -7,10 +7,11 @@ type Insiden = {
   lat: number; lng: number; t: number; description: string; sourceName: string; sourceUrl: string; article: string;
 };
 type Cam = { name: string; type: 'iframe' | 'youtube' | 'hls' | 'image'; url: string; openUrl?: string; note?: string };
-type XAcc = { label: string; handle: string };
+type XAcc = { label: string; handle: string; group?: string };
+type Tv = { name: string; group: string; channelId: string };
 
 const cfg = JSON.parse(document.getElementById('sitrep-config')!.textContent || '{}') as {
-  insiden: Insiden[]; cctv: Cam[]; x: XAcc[];
+  insiden: Insiden[]; cctv: Cam[]; x: XAcc[]; tv: Tv[];
 };
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 
@@ -386,14 +387,17 @@ setupCctv();
 
 /* ================= X live (dimuat setelah klik) ================= */
 function setupX() {
+  const groupsEl = $('xGroups');
   const tabs = $('xTabs');
   const stage = $('xStage');
-  if (!cfg.x.length) { stage.replaceChildren(h('p', 'note', 'Belum ada akun. Tambahkan lewat admin: Pengaturan Sitrep.')); return; }
-  let handle = cfg.x[0].handle;
+  const accounts = (cfg.x || []).filter((a) => /^\w{1,15}$/.test(a.handle));
+  if (!accounts.length) { stage.replaceChildren(h('p', 'note', 'Belum ada akun. Tambahkan lewat admin: Pengaturan Sitrep.')); return; }
+  const groups = [...new Set(accounts.map((a) => a.group || 'Akun'))];
+  let group = groups[0];
+  let handle = accounts.find((a) => (a.group || 'Akun') === group)!.handle;
   let loaded = false;
   const draw = () => {
     stage.replaceChildren();
-    if (!/^\w{1,15}$/.test(handle)) { stage.append(h('p', 'note', 'Nama akun X tidak valid.')); return; }
     const dark = document.documentElement.getAttribute('data-theme') === 'dark';
     const a = h('a', 'twitter-timeline', `Posts oleh @${handle}`);
     a.href = `https://twitter.com/${handle}`;
@@ -414,21 +418,164 @@ function setupX() {
     document.head.append(s);
     draw();
   };
-  cfg.x.forEach((acc, i) => {
-    const b = h('button', '', acc.label);
-    b.type = 'button';
-    b.setAttribute('role', 'tab');
-    b.setAttribute('aria-selected', String(i === 0));
-    b.addEventListener('click', () => {
-      handle = acc.handle;
-      tabs.querySelectorAll('button').forEach((x, k) => x.setAttribute('aria-selected', String(k === i)));
-      if (loaded) draw();
-    });
-    tabs.append(b);
-  });
+  const drawTabs = () => {
+    tabs.replaceChildren();
+    for (const acc of accounts.filter((a) => (a.group || 'Akun') === group)) {
+      const b = h('button', '', acc.label);
+      b.type = 'button';
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-selected', String(acc.handle === handle));
+      b.addEventListener('click', () => {
+        handle = acc.handle;
+        tabs.querySelectorAll('button').forEach((x) => x.setAttribute('aria-selected', String(x === b)));
+        if (loaded) draw();
+      });
+      tabs.append(b);
+    }
+  };
+  if (groups.length > 1) {
+    for (const g of groups) {
+      const b = h('button', '', g);
+      b.type = 'button';
+      b.setAttribute('aria-selected', String(g === group));
+      b.addEventListener('click', () => {
+        group = g;
+        handle = accounts.find((a) => (a.group || 'Akun') === g)!.handle;
+        groupsEl.querySelectorAll('button').forEach((x) => x.setAttribute('aria-selected', String(x === b)));
+        drawTabs();
+        if (loaded) draw();
+      });
+      groupsEl.append(b);
+    }
+  } else groupsEl.hidden = true;
+  drawTabs();
   $('xLoad').addEventListener('click', load);
 }
 setupX();
+
+/* ================= TV live (YouTube resmi) ================= */
+function tvSrc(ch: Tv, mute = true) {
+  return `https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(ch.channelId)}&autoplay=1&mute=${mute ? 1 : 0}&playsinline=1&rel=0`;
+}
+function tvFrame(ch: Tv) {
+  const f = document.createElement('iframe');
+  f.src = tvSrc(ch);
+  f.title = 'Siaran langsung ' + ch.name;
+  f.loading = 'lazy';
+  f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  f.allowFullscreen = true;
+  f.referrerPolicy = 'strict-origin-when-cross-origin';
+  return f;
+}
+function setupTv() {
+  const stage = $('tvStage');
+  const groupsEl = $('tvGroups');
+  const tabs = $('tvTabs');
+  const gridBtn = $<HTMLButtonElement>('tvGrid');
+  const list = (cfg.tv || []).filter((c) => /^UC[\w-]{20,24}$/.test(c.channelId));
+  if (!list.length) { stage.replaceChildren(h('p', 'state', 'Belum ada saluran TV. Tambahkan lewat admin: Pengaturan Sitrep.')); gridBtn.hidden = true; return; }
+  const groups = [...new Set(list.map((c) => c.group))];
+  let group = groups[0];
+  let current = list.find((c) => c.group === group)!;
+  let gridMode = false;
+  const ytLink = (c: Tv) => `https://www.youtube.com/channel/${c.channelId}/live`;
+
+  const showIdle = () => {
+    stage.replaceChildren();
+    const box = h('div', 'tv-actions');
+    const play = h('button', 'btn btn-amber', 'Putar ' + current.name);
+    play.type = 'button';
+    play.addEventListener('click', playOne);
+    const open = h('a', 'btn btn-ghost', 'Buka di YouTube');
+    open.href = ytLink(current); open.target = '_blank'; open.rel = 'noopener noreferrer';
+    box.append(play, open);
+    stage.append(box);
+  };
+  const playOne = () => {
+    stage.replaceChildren();
+    const wrap = h('div', 'tv-one');
+    wrap.append(tvFrame(current));
+    stage.append(wrap);
+    const bar = h('div', 'tv-actions');
+    const open = h('a', 'btn btn-ghost', 'Buka ' + current.name + ' di YouTube');
+    open.href = ytLink(current); open.target = '_blank'; open.rel = 'noopener noreferrer';
+    bar.append(open);
+    stage.append(bar);
+  };
+  const playGrid = () => {
+    stage.replaceChildren();
+    const g = h('div', 'tv-grid');
+    const four = list.filter((c) => c.group === group).concat(list.filter((c) => c.group !== group)).slice(0, 4);
+    for (const c of four) {
+      const cell = h('div', 'tv-cell');
+      cell.append(h('span', '', c.name), tvFrame(c));
+      g.append(cell);
+    }
+    stage.append(g);
+  };
+  const drawTabs = () => {
+    tabs.replaceChildren();
+    for (const c of list.filter((x) => x.group === group)) {
+      const b = h('button', '', c.name);
+      b.type = 'button';
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-selected', String(c === current));
+      b.addEventListener('click', () => {
+        current = c;
+        gridMode = false; gridBtn.classList.remove('active');
+        tabs.querySelectorAll('button').forEach((x) => x.setAttribute('aria-selected', String(x === b)));
+        playOne();
+      });
+      tabs.append(b);
+    }
+  };
+  for (const g of groups) {
+    const b = h('button', 'chip' + (g === group ? ' active' : ''), g);
+    b.type = 'button';
+    b.addEventListener('click', () => {
+      group = g;
+      current = list.find((c) => c.group === g)!;
+      gridMode = false; gridBtn.classList.remove('active');
+      groupsEl.querySelectorAll('.chip').forEach((x) => x.classList.toggle('active', x === b));
+      drawTabs();
+      showIdle();
+    });
+    groupsEl.append(b);
+  }
+  gridBtn.addEventListener('click', () => {
+    gridMode = !gridMode;
+    gridBtn.classList.toggle('active', gridMode);
+    if (gridMode) playGrid(); else playOne();
+  });
+  drawTabs();
+  showIdle();
+}
+setupTv();
+
+/* ================= Tren pencarian (Google Trends) ================= */
+async function loadTrends() {
+  const list = $('trendList');
+  try {
+    const j = await getJson('/api/trends');
+    list.replaceChildren();
+    for (const it of j.items as { q: string; traffic: string; t: number | null; news: { title: string; url: string; src: string } | null }[]) {
+      const li = h('li');
+      const top = h('div', 'trend-q');
+      top.append(h('strong', '', it.q), h('span', '', it.traffic ? it.traffic + ' pencarian' : ''));
+      li.append(top);
+      if (it.news?.title) {
+        const m = h('div', 'm');
+        m.append(link(it.news.title, it.news.url));
+        if (it.news.src) m.append(h('span', '', it.news.src));
+        li.append(m);
+      }
+      list.append(li);
+    }
+    $('trendStamp').textContent = 'Diperbarui ' + clock();
+  } catch {
+    errorItem(list, 'Tren pencarian belum bisa dimuat.', loadTrends);
+  }
+}
 
 /* ================= Notifikasi gempa (hanya saat halaman terbuka) ================= */
 function setupNotif() {
@@ -453,4 +600,5 @@ every(loadGempa, 2 * 60 * 1000);
 every(loadCuaca, 5 * 60 * 1000);
 every(loadWire, 2 * 60 * 1000);
 every(loadHot, 15 * 60 * 1000);
+every(loadTrends, 10 * 60 * 1000);
 document.addEventListener('visibilitychange', () => { if (!document.hidden) { loadGempa(); loadWire(); } });

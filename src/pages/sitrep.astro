@@ -23,7 +23,7 @@ const insiden = all
     article: e.data.relatedArticle ? `/berita/${e.data.relatedArticle}/` : '',
   }));
 
-const config = { insiden, cctv: sitrep.cctv, x: sitrep.x };
+const config = { insiden, cctv: sitrep.cctv, x: sitrep.x, tv: sitrep.tv };
 ---
 <BaseLayout
   title="Sitrep Faktavia: Pantauan Situasi Indonesia"
@@ -88,6 +88,20 @@ const config = { insiden, cctv: sitrep.cctv, x: sitrep.x };
         <p class="note">Hanya judul dan tautan ke media asal. Label topik dibuat otomatis dari kata kunci dan belum diverifikasi.</p>
       </article>
 
+      <article class="panel sr-tv">
+        <header>
+          <h2>TV Live</h2>
+          <span class="stamp">Siaran resmi via YouTube</span>
+        </header>
+        <div class="tv-controls">
+          <div class="chips" id="tvGroups" role="group" aria-label="Kelompok TV"></div>
+          <button class="chip" id="tvGrid" type="button">Tampilan 4 layar</button>
+        </div>
+        <div class="tabs" id="tvTabs" role="tablist" aria-label="Daftar TV"></div>
+        <div class="tv-stage" id="tvStage"><p class="state">Pilih saluran di atas.</p></div>
+        <p class="note">Siaran dimuat langsung dari kanal YouTube resmi masing-masing stasiun dan diputar tanpa suara; tekan ikon speaker di pemutar untuk menyalakan suara. Jika layar menampilkan "Video tidak tersedia", stasiun itu sedang tidak siaran atau melarang siarannya ditampilkan di situs lain. Pakai tombol "Buka di YouTube".</p>
+      </article>
+
       <article class="panel sr-cctv">
         <header>
           <h2>CCTV</h2>
@@ -129,14 +143,25 @@ const config = { insiden, cctv: sitrep.cctv, x: sitrep.x };
       <article class="panel sr-x">
         <header>
           <h2>X Live</h2>
-          <span class="stamp">Akun resmi pilihan</span>
+          <span class="stamp">Akun pilihan redaksi</span>
         </header>
+        <div class="tabs" id="xGroups" role="group" aria-label="Kelompok akun"></div>
         <div class="tabs" id="xTabs" role="tablist" aria-label="Akun X"></div>
         <div class="x-stage" id="xStage">
           <button class="btn btn-navy" id="xLoad" type="button">Muat timeline X</button>
-          <p class="note">Timeline dimuat dari X (pihak ketiga) hanya setelah kamu menekan tombol ini.</p>
+          <p class="note">Timeline dimuat dari X (pihak ketiga) hanya setelah kamu menekan tombol ini. Menampilkan unggahan akun yang dipilih redaksi; ini bukan daftar tren X dan unggahan tokoh tidak berarti sudah diverifikasi Faktavia.</p>
         </div>
       </article>
+
+      <article class="panel sr-trend">
+        <header>
+          <h2>Lagi Ramai Dicari</h2>
+          <span class="stamp" id="trendStamp"></span>
+        </header>
+        <ul class="feed compact" id="trendList"><li class="state">Memuat tren…</li></ul>
+        <p class="note">Tren <strong>pencarian Google</strong> di Indonesia, bukan tren di X. Sumber: Google Trends.</p>
+      </article>
+
     </div>
   </section>
 
@@ -189,7 +214,9 @@ const config = { insiden, cctv: sitrep.cctv, x: sitrep.x };
     .sr-insiden { grid-column: span 6; }
     .sr-gempa { grid-column: span 3; }
     .sr-cuaca { grid-column: span 3; }
-    .sr-x { grid-column: span 12; }
+    .sr-tv { grid-column: span 12; }
+    .sr-x { grid-column: span 8; }
+    .sr-trend { grid-column: span 4; }
   }
   .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
   .panel > header { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 14px 18px; border-bottom: 1px solid var(--line); }
@@ -229,6 +256,7 @@ const config = { insiden, cctv: sitrep.cctv, x: sitrep.x };
   .err { color: #B42318; }
   .retry { margin-left: 8px; font-weight: 700; text-decoration: underline; cursor: pointer; background: none; border: 0; color: inherit; font-family: inherit; }
 
+  .tabs[hidden] { display: none; }
   .tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px 18px 4px; }
   .tabs button { padding: 7px 14px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); font-weight: 700; font-size: .82rem; cursor: pointer; font-family: inherit; color: inherit; }
   .tabs button[aria-selected="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
@@ -238,6 +266,25 @@ const config = { insiden, cctv: sitrep.cctv, x: sitrep.x };
   .cctv-stage .state { color: #B9C7DA; padding: 20px; text-align: center; max-width: 36em; }
   .cctv-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 20px; }
   .cctv-actions .btn { padding: 10px 18px; font-size: .88rem; }
+  .tv-controls { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; padding: 12px 18px 0; }
+  .tv-controls .chips { gap: 6px; }
+  .tv-controls .chip, .tabs .chip { padding: 6px 12px; font-size: .78rem; cursor: pointer; font-family: inherit; color: inherit; }
+  .tv-controls .chip.active { color: #fff; }
+  [data-theme="dark"] .tv-controls .chip.active { color: var(--navy-d); }
+  .tv-stage { margin: 10px 18px 0; border-radius: 14px; background: #07162A; overflow: hidden; min-height: 200px; display: grid; place-items: center; }
+  .tv-stage .state { color: #B9C7DA; padding: 20px; text-align: center; }
+  .tv-one { width: 100%; aspect-ratio: 16 / 9; max-height: 70vh; }
+  .tv-one iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .tv-grid { display: grid; gap: 6px; width: 100%; grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .tv-grid { grid-template-columns: 1fr 1fr; } }
+  .tv-cell { position: relative; aspect-ratio: 16 / 9; background: #000; }
+  .tv-cell iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .tv-cell span { position: absolute; left: 8px; top: 8px; background: rgba(7,22,42,.82); color: #fff; font-size: .72rem; font-weight: 800; padding: 3px 8px; border-radius: 6px; z-index: 2; pointer-events: none; }
+  .tv-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 20px; }
+  .tv-actions .btn { padding: 10px 18px; font-size: .88rem; }
+  .trend-q { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .trend-q strong { font-weight: 800; }
+  .trend-q span { color: var(--muted); font-size: .74rem; font-weight: 700; white-space: nowrap; }
   .x-stage { padding: 14px 18px 8px; min-height: 120px; }
   .x-stage .note { padding-left: 0; }
 

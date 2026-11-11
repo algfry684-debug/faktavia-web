@@ -131,10 +131,19 @@ collections:
               - { label: Alamat Siaran, name: url, widget: string, hint: "Harus diawali https://. Untuk youtube boleh isi ID video atau link-nya." }
               - { label: Alamat Buka di Tab Baru, name: openUrl, widget: string, required: false }
               - { label: Catatan, name: note, widget: string, required: false }
+          - label: Saluran TV Live
+            name: tv
+            widget: list
+            summary: "{{fields.name}} ({{fields.group}})"
+            fields:
+              - { label: Nama Saluran, name: name, widget: string }
+              - { label: Kelompok, name: group, widget: select, options: [Nasional, Internasional] }
+              - { label: ID Channel YouTube, name: channelId, widget: string, hint: "Diawali UC dan 24 karakter. Cara cari: buka halaman channel resmi di YouTube, lalu lihat ID-nya di Tentang atau di kode sumber. Pastikan channel resmi stasiun TV-nya." }
           - label: Akun X
             name: x
             widget: list
-            summary: "{{fields.label}} (@{{fields.handle}})"
+            summary: "{{fields.label}} (@{{fields.handle}}) - {{fields.group}}"
             fields:
               - { label: Label, name: label, widget: string }
-              - { label: Username tanpa @, name: handle, widget: string }
+              - { label: Username tanpa @, name: handle, widget: string, hint: "Pastikan akun resmi dan terverifikasi, hati-hati akun palsu." }
+              - { label: Kelompok, name: group, widget: select, options: [Lembaga, Tokoh], default: Lembaga }
