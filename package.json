@@ -11,6 +11,8 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^5.18.2"
+    "astro": "^5.18.2",
+    "hls.js": "^1.7.4",
+    "leaflet": "^1.9.4"
   }
 }
