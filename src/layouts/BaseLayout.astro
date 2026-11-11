@@ -106,6 +106,7 @@ const email = situs.email || '';
         <nav class="main" aria-label="Kategori">
           <ul>
             <li><a href="/terbaru/">Terkini</a></li>
+            <li><a href="/sitrep/" class="nav-live"><span class="live-dot"></span>Sitrep</a></li>
             {KATEGORI.map((k) => <li><a href={catUrl(k)}>{k}</a></li>)}
           </ul>
         </nav>
@@ -124,6 +125,7 @@ const email = situs.email || '';
 
       <div class="mobile-nav" id="mobileNav">
         <a href="/terbaru/">Terkini</a>
+        <a href="/sitrep/" class="nav-live"><span class="live-dot"></span>Sitrep</a>
         {KATEGORI.map((k) => <a href={catUrl(k)}>{k}</a>)}
         <a href="/#ikuti">Ikuti Kami</a>
       </div>

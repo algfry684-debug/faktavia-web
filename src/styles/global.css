@@ -230,3 +230,12 @@
 .page-head { padding: 40px 0 6px; }
 .page-head p { color: var(--muted); margin-top: 6px; }
 .related { padding-top: 10px; }
+
+/* ============ SITREP: tautan menu + banner beranda ============ */
+.live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #E5484D; margin-right: 7px; vertical-align: 1px; animation: livepulse 1.6s infinite; }
+@keyframes livepulse { 0% { box-shadow: 0 0 0 0 rgba(229,72,77,.55); } 70% { box-shadow: 0 0 0 8px rgba(229,72,77,0); } 100% { box-shadow: 0 0 0 0 rgba(229,72,77,0); } }
+nav.main a.nav-live { color: var(--ink); font-weight: 800; }
+.sr-teaser { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; padding: 16px 22px; border-radius: 18px; background: var(--navy-d); color: #fff; border: 1px solid rgba(255,255,255,.1); transition: .2s; }
+.sr-teaser:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.sr-teaser strong { color: var(--amber); margin-right: 8px; }
+.sr-teaser .go { margin-left: auto; font-weight: 800; color: var(--amber); }
